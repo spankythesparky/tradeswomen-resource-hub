@@ -96,18 +96,33 @@ p.lede{
   opacity:0;animation:rise .8s cubic-bezier(.2,.7,.3,1) .42s forwards;
 }
 
+footer{
+  position:relative;z-index:1;
+  padding:20px 24px 34px;text-align:center;
+  opacity:0;animation:rise .8s cubic-bezier(.2,.7,.3,1) .68s forwards;
+}
+footer p{
+  margin:0;
+  font-family:var(--disp);font-weight:300;
+  font-size:12.5px;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--muted);
+}
+footer b{font-weight:500;color:var(--char);letter-spacing:.11em;white-space:nowrap}
+
 @keyframes rise{to{opacity:1;transform:none}}
 @keyframes draw{to{transform:scaleX(1)}}
 
 a:focus-visible{outline:2px solid var(--coral-dk);outline-offset:3px}
 
 @media (prefers-reduced-motion: reduce){
-  .mark,h1,p.lede{opacity:1;transform:none;animation:none}
+  .mark,h1,p.lede,footer{opacity:1;transform:none;animation:none}
   .rule{transform:scaleX(1);animation:none}
 }
 @media(max-width:560px){
   main{padding:40px 22px}
   .mark{margin-bottom:34px}
+  footer p{font-size:11px;letter-spacing:.09em;line-height:1.75}
+  footer b{letter-spacing:.09em;display:block}
 }
 @media(max-height:640px){
   main{padding:32px 24px}
@@ -115,6 +130,7 @@ a:focus-visible{outline:2px solid var(--coral-dk);outline-offset:3px}
   .rule{margin-bottom:22px}
   h1{font-size:clamp(23px,3.2vw,29px);margin-bottom:14px}
   p.lede{font-size:15.5px}
+  footer{padding:14px 24px 22px}
 }
 </style>
 </head>
@@ -130,6 +146,10 @@ a:focus-visible{outline:2px solid var(--coral-dk);outline-offset:3px}
     <p class="lede">A single place to find training, apprenticeship pathways, mentorship, events, and your rights on the job. It's being built right now, and it'll be back here soon.</p>
   </div>
 </main>
+
+<footer>
+  <p>Proudly being designed by <b>Spanky the Sparky LLC</b></p>
+</footer>
 
 </body>
 </html>
